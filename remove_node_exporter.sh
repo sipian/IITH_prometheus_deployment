@@ -11,3 +11,7 @@ sudo systemctl disable node_exporter.service
 sudo rm /etc/systemd/system/node_exporter.service
 sudo systemctl daemon-reload
 sudo systemctl reset-failed
+sudo systemctl status node_exporter.service 
+
+echo -e "**** If you are getting Active: inactive (dead) , \n\tnode_exporter has been removed from this system !!!"
+ 

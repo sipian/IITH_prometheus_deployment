@@ -899,7 +899,7 @@
               "expr": "sum(node_nf_conntrack_entries_limit{job=~\"$server\"}) - sum(node_nf_conntrack_entries{job=~\"$server\"})",
               "format": "time_series",
               "intervalFactor": 2,
-              "legendFormat": "free",
+              "legendFormat": "Number of free flow entries for connection tracking",
               "metric": "node_nf_conntrack_entries_limit",
               "refId": "A",
               "step": 30,
@@ -909,7 +909,7 @@
               "expr": "sum(node_nf_conntrack_entries_limit{job=~\"$server\"})",
               "format": "time_series",
               "intervalFactor": 2,
-              "legendFormat": "limit",
+              "legendFormat": "Maximum size of connection tracking table",
               "metric": "node_nf_conntrack_entries_limit",
               "refId": "B",
               "step": 30
@@ -977,7 +977,7 @@
         "multi": true,
         "name": "server",
         "options": [],
-        "query": "label_values(node_cpu,job)",
+        "query": "label_values(node_boot_time,job)",
         "refresh": 1,
         "regex": "",
         "sort": 1,
@@ -1041,5 +1041,5 @@
   },
   "timezone": "browser",
   "title": "Node - Network Overview",
-  "version": 4
+  "version": 7
 }

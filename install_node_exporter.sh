@@ -68,4 +68,7 @@ sudo systemctl status node_exporter.service
 cd ../../
 sudo rm -r prometheus_node_exporter_installation_2017
 
-echo "**** Installed And Running Successfully On Port 9100 !!!"
+echo -e "**** If you are getting Active: active (running) , \n\tnode_exporter is Running Successfully On Port 9100 !!!\n\n"
+
+echo -e "\033[0;31m Add this server IP in prometheus.yml file to start scraping this target"
+

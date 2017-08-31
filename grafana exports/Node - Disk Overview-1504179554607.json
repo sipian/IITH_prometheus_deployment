@@ -82,19 +82,19 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "irate(node_disk_bytes_read{job=\"node\",instance=~\"$node:$port\"}[5m])",
+              "expr": "irate(node_disk_bytes_read{job=~\"$server\"}[5m])",
               "format": "time_series",
               "intervalFactor": 2,
-              "legendFormat": "{{device}} - read",
+              "legendFormat": "{{job}} : {{device}} - read",
               "refId": "A",
               "step": 30,
               "target": ""
             },
             {
-              "expr": "irate(node_disk_bytes_written{job=\"node\",instance=~\"$node:$port\"}[5m])",
+              "expr": "irate(node_disk_bytes_written{job=~\"$server\"}[5m])",
               "format": "time_series",
               "intervalFactor": 2,
-              "legendFormat": "{{device}} - write",
+              "legendFormat": "{{job}} : {{device}} - write",
               "refId": "B",
               "step": 30,
               "target": ""
@@ -185,28 +185,28 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "irate(node_disk_io_now{job=\"node\",instance=~\"$node:$port\"}[5m])",
+              "expr": "irate(node_disk_io_now{job=~\"$server\"}[5m])",
               "format": "time_series",
               "intervalFactor": 2,
-              "legendFormat": "{{device}} - now",
+              "legendFormat": "{{job}} : {{device}} - now",
               "refId": "A",
               "step": 30,
               "target": ""
             },
             {
-              "expr": "irate(node_disk_io_time_ms{job=\"node\",instance=~\"$node:$port\"}[5m])",
+              "expr": "irate(node_disk_io_time_ms{job=~\"$server\"}[5m])",
               "format": "time_series",
               "intervalFactor": 2,
-              "legendFormat": "{{device}} - time_ms",
+              "legendFormat": "{{job}} : {{device}} - time_ms",
               "refId": "B",
               "step": 30,
               "target": ""
             },
             {
-              "expr": "irate(node_disk_io_time_weighted{job=\"node\",instance=~\"$node:$port\"}[5m])",
+              "expr": "irate(node_disk_io_time_weighted{job=~\"$server\"}[5m])",
               "format": "time_series",
               "intervalFactor": 2,
-              "legendFormat": "{{device}} - time_weighted",
+              "legendFormat": "{{job}} : {{device}} - time_weighted",
               "refId": "C",
               "step": 30,
               "target": ""
@@ -297,7 +297,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "irate(node_disk_read_time_ms{job=\"node\",instance=~\"$node:$port\"}[5m])",
+              "expr": "irate(node_disk_read_time_ms{job=~\"$server\"}[5m])",
               "format": "time_series",
               "intervalFactor": 2,
               "legendFormat": "{{device}} - read",
@@ -306,7 +306,7 @@
               "target": ""
             },
             {
-              "expr": "irate(node_disk_write_time_ms{job=\"node\",instance=~\"$node:$port\"}[5m])",
+              "expr": "irate(node_disk_write_time_ms{job=~\"$server\"}[5m])",
               "format": "time_series",
               "intervalFactor": 2,
               "legendFormat": "{{device}} - write",
@@ -400,19 +400,19 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "irate(node_disk_reads_completed{job=\"node\",instance=~\"$node:$port\"}[5m])",
+              "expr": "irate(node_disk_reads_completed{job=~\"$server\"}[5m])",
               "format": "time_series",
               "intervalFactor": 2,
-              "legendFormat": "{{device}} - reads",
+              "legendFormat": "{{job}} : {{device}} - reads",
               "refId": "B",
               "step": 30,
               "target": ""
             },
             {
-              "expr": "irate(node_disk_writes_completed{job=\"node\",instance=~\"$node:$port\"}[5m])",
+              "expr": "irate(node_disk_writes_completed{job=~\"$server\"}[5m])",
               "format": "time_series",
               "intervalFactor": 2,
-              "legendFormat": "{{device}} - writes",
+              "legendFormat": "{{job}} : {{device}} - writes",
               "refId": "C",
               "step": 30,
               "target": ""
@@ -503,19 +503,19 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "irate(node_disk_reads_merged{job=\"node\",instance=~\"$node:$port\"}[5m])",
+              "expr": "irate(node_disk_reads_merged{job=~\"$server\"}[5m])",
               "format": "time_series",
               "intervalFactor": 2,
-              "legendFormat": "{{device}} - reads",
+              "legendFormat": "{{job}} : {{device}} - reads",
               "refId": "B",
               "step": 30,
               "target": ""
             },
             {
-              "expr": "irate(node_disk_writes_merged{job=\"node\",instance=~\"$node:$port\"}[5m])",
+              "expr": "irate(node_disk_writes_merged{job=~\"$server\"}[5m])",
               "format": "time_series",
               "intervalFactor": 2,
-              "legendFormat": "{{device}} - writes",
+              "legendFormat": "{{job}} : {{device}} - writes",
               "refId": "C",
               "step": 30,
               "target": ""
@@ -606,19 +606,19 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "irate(node_disk_sectors_read{job=\"node\",instance=~\"$node:$port\"}[5m])",
+              "expr": "irate(node_disk_sectors_read{job=~\"$server\"}[5m])",
               "format": "time_series",
               "intervalFactor": 2,
-              "legendFormat": "{{device}} - read",
+              "legendFormat": "{{job}} : {{device}} - read",
               "refId": "B",
               "step": 30,
               "target": ""
             },
             {
-              "expr": "irate(node_disk_sectors_written{job=\"node\",instance=~\"$node:$port\"}[5m])",
+              "expr": "irate(node_disk_sectors_written{job=~\"$server\"}[5m])",
               "format": "time_series",
               "intervalFactor": 2,
-              "legendFormat": "{{device}} - written",
+              "legendFormat": "{{job}} : {{device}} - written",
               "refId": "C",
               "step": 30,
               "target": ""
@@ -682,35 +682,15 @@
         "current": {},
         "datasource": "${DS_SERVER_1}",
         "hide": 0,
-        "includeAll": false,
+        "includeAll": true,
         "label": null,
-        "multi": false,
-        "name": "node",
+        "multi": true,
+        "name": "server",
         "options": [],
-        "query": "label_values(node_boot_time{job=\"node\"}, instance)",
+        "query": "label_values(node_boot_time, job)",
         "refresh": 1,
-        "regex": "/([^:]+):.*/",
+        "regex": "",
         "sort": 1,
-        "tagValuesQuery": "",
-        "tags": [],
-        "tagsQuery": "",
-        "type": "query",
-        "useTags": false
-      },
-      {
-        "allValue": null,
-        "current": {},
-        "datasource": "${DS_SERVER_1}",
-        "hide": 2,
-        "includeAll": false,
-        "label": null,
-        "multi": false,
-        "name": "port",
-        "options": [],
-        "query": "label_values(node_boot_time, instance)",
-        "refresh": 1,
-        "regex": "/[^:]+:(.*)/",
-        "sort": 0,
         "tagValuesQuery": "",
         "tags": [],
         "tagsQuery": "",
@@ -750,5 +730,5 @@
   },
   "timezone": "browser",
   "title": "Node - Disk Overview",
-  "version": 4
+  "version": 10
 }
